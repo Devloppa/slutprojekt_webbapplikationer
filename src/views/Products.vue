@@ -11,8 +11,17 @@
       /Cart<br />
       /Login
     </p>
+    <!-- <img :src="picsOfProducts"> -->
   </div>
 </template>
+
+ <script>
+// export default {
+//   data() {
+//     picsOfProducts: require('./assets/products.json/imgFile')
+//   }
+// }
+ </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>

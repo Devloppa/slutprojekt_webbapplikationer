@@ -56,23 +56,4 @@ async function deleteProduct(token, product) {
     return response
 }
 
-async function getAllOrders(token) {
-    let response = await fetch(URL + '/orders', {
-        headers: { 'Authorization': token }
-    })
-    return response.json()
-}
-
-async function addOrder(token, order) {
-    let response = await fetch(URL + '/orders', {
-        method: 'POST',
-        headers: {
-            'Authorization': token,
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(order)
-    })
-    return response.json()
-}
-
-export default { getAllProducts, getSingleproduct, createProduct, updateProduct, deleteProduct, getAllOrders, addOrder }
+export default { getAllProducts, getSingleproduct, createProduct, updateProduct, deleteProduct }

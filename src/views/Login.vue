@@ -1,5 +1,5 @@
 <template>
-  <div class="blog">
+  <div class="login">
     <h1>Login section</h1>
     <img src="https://via.placeholder.com/150" alt="Placeholder" />
     <p>

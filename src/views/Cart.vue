@@ -1,24 +1,24 @@
 <template>
-  <div class="about">
+  <div class="cart">
     <h1>Cart section</h1>
     <img src="https://via.placeholder.com/150" alt="Placeholder" />
-    <h3>Product</h3>
+    <h3>Product in cart</h3>
     <p>
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, amet.
     </p>
     <img src="https://via.placeholder.com/150" alt="Placeholder" />
-    <h3>Product</h3>
+    <h3>Product in cart</h3>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
       excepturi.
     </p>
     <img src="https://via.placeholder.com/150" alt="Placeholder" />
-    <h3>Product</h3>
+    <h3>Product in cart</h3>
     <p>
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure, fugiat?
     </p>
     <img src="https://via.placeholder.com/150" alt="Placeholder" />
-    <h3>Product</h3>
+    <h3>Product in cart</h3>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
       laborum.

@@ -2,14 +2,14 @@
   <div id="app">
     <div id="nav">
       <ul class="nav-links">
-        <li class="home-link">
-        <router-link to="/">Home</router-link> 
+        <li class="products-link">
+        <router-link to="/">Products</router-link> 
         </li>
-        <li class="about-link">
-        <router-link to="/about">About</router-link>
+        <li class="cart-link">
+        <router-link to="/cart">Cart</router-link>
         </li>
-        <li class="blog-link">
-        <router-link to="/blog">Blog</router-link>
+        <li class="login-link">
+        <router-link to="/login">Login</router-link>
         </li>
       </ul>
     </div>
@@ -41,27 +41,27 @@
     display: flex;
 }
 
-.home-link{
+.products-link{
     padding-right: 20px;
     list-style: none;
 }
-.home-link:hover{
+.products-link:hover{
     text-decoration: underline;
 }
 
-.about-link{
+.cart-link{
     padding-right: 20px;
     list-style: none;
 }
-.about-link:hover{
+.cart-link:hover{
     text-decoration: underline;
 }
 
-.blog-link{
+.login-link{
     padding-right: 20px;
     list-style: none;
 }
-.blog-link:hover{
+.login-link:hover{
     text-decoration: underline;
 }
 </style>

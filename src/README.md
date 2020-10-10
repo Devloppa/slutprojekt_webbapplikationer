@@ -101,7 +101,10 @@ Det ska finnas en `Admin Area`-view med ett CRUD-gränssnitt för alla produkter
 ## Projektmetodik
 ```
 Följer Kanban.
-Kanban är en metod för att hantera kunskapsarbete med betoning på "just in time"-leveranser utan överbelastning av gruppmedlemmarna. I denna process visualiseras uppgiften för deltagarna så att de kan se vad som behöver göras. Gruppmedlemmarna tar sedan arbete från denna backlogg.
+Kanban är en metod för att hantera kunskapsarbete med betoning på "just in time"-leveranser 
+utan överbelastning av gruppmedlemmarna. 
+I denna process visualiseras uppgiften för deltagarna så att de kan se vad som behöver göras. 
+Gruppmedlemmarna tar sedan arbete från denna backlogg.
 ```
 
 ## Project setup

@@ -26,6 +26,7 @@ export default {
   background-color: #ffffff;
   border: 1px solid #cccccc;
   padding: 20px;
-  margin-top: 10px;
+  margin-top: 60px;
+  text-align: center;
 }
 </style>

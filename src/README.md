@@ -8,6 +8,7 @@ Samla era erfarenheter från Kanban, Scrum och diskussionerna av Modern Agile oc
 ## Instruktioner
 Ni ska bygga en FrontEnd till en färdig BackEnd.
 BackEnden finns på följande länk [https://github.com/zocom-david-lundholm/webshop-rest-api](https://github.com/zocom-david-lundholm/webshop-rest-api)
+!!! URL 404 då läraren i kursen tagit bort tillgång till API. Använder lokal API.
 
 Forka detta repo och redigera README.md.
 
@@ -98,11 +99,10 @@ Det ska finnas en `Admin Area`-view med ett CRUD-gränssnitt för alla produkter
 
 
 ## Projektmetodik
-
-
-
-
-
+```
+Följer Kanban.
+Kanban är en metod för att hantera kunskapsarbete med betoning på "just in time"-leveranser utan överbelastning av gruppmedlemmarna. I denna process visualiseras uppgiften för deltagarna så att de kan se vad som behöver göras. Gruppmedlemmarna tar sedan arbete från denna backlogg.
+```
 
 ## Project setup
 ```

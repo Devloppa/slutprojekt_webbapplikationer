@@ -3,6 +3,7 @@ import Router from "vue-router"
 import Products from "./views/Products.vue"
 import Cart from "./views/Cart.vue"
 import Login from "./views/Login.vue"
+import Secure from "./views/Secure.vue"
 
 Vue.use(Router);
 
@@ -21,6 +22,11 @@ const routes = [
         path: "/login",
         name: "login",
         component: Login
+    },
+    {
+        path: "/secure",
+        name: "secure",
+        component: Secure
     },
 ];
 

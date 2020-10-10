@@ -53,7 +53,7 @@ async function deleteProduct(token, product) {
         },
         body: JSON.stringify(product)
     })
-    return response 
+    return response
 }
 
 async function getAllOrders(token) {

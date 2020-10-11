@@ -1,7 +1,7 @@
 <template>
   <div id="secure">
     <h1>Secure Area</h1>
-    <p>Login succesful!</p>
+    <p>Login successful!</p>
     <button type="button" v-on:click="logout()">Logout</button>
   </div>
 </template>

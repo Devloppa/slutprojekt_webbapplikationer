@@ -55,7 +55,7 @@ jQuery(document).ready(function () {
 
     // Lägger in datan i rader i tabellen
     if (product != null) {
-      $("#table").append(product);
+      jQuery("#table").append(product);
 
       var addButton = document.getElementById("AddToCartButton");
       var button = document.createElement("BUTTON");
@@ -63,7 +63,7 @@ jQuery(document).ready(function () {
       button.appendChild(textOnButton);
       addButton.appendChild(button);
 
-      $("#table").append(addButton);
+      jQuery("#table").append(addButton);
     } else {
       console.log("Product from products.json is null!")
     };

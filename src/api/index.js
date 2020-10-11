@@ -1,25 +1,20 @@
 const URL = document.location.protocol + '//' + document.location.host + '/api'
 
-// /api/products/	GET	Returnerar en lista på samtliga produkter.
-// /api/products/:id	GET	Returnerar en enstaka produkt.
-// /api/products/	POST	Skapar en ny produkt, se produkt-modell. Enbart tillgänglig för admins
-// /api/products/:id	PATCH	Uppdaterar produkt, se produkt-modell. Enbart tillgänglig för admins
-// /api/products/:id	DELETE	Tar bort en produkt med :id. Enbart tillgänglig för admins
-// /api/orders	GET	Returnerar en lista på samtliga ordrar för admins, och ägda orders för inloggad användare.
-// /api/orders	POST	Skapar en ny order, se order-modell.
-
+// /api/products/	Returnerar en lista på samtliga produkter.
 async function getAllProducts() {
     let response = await fetch(URL + '/products')
     let products = await response.json()
     return products
 }
 
+// /api/products/:id	Returnerar en enstaka produkt.
 async function getSingleproduct(id) {
     let response = await fetch(URL + '/products/' + id)
     let singleproduct = await response.json()
     return singleproduct
 }
 
+// /api/products/	POST	Skapar en ny produkt, se produkt-modell.
 async function createProduct(token, product) {
     let response = await fetch(URL + '/products/', {
         method: 'POST',
@@ -32,6 +27,7 @@ async function createProduct(token, product) {
     return response
 }
 
+// /api/products/:id	PATCH	Uppdaterar produkt, se produkt-modell.
 async function updateProduct(token, product) {
     let response = await fetch(URL + '/products/' + product._id, {
         method: 'PATCH',
@@ -44,6 +40,7 @@ async function updateProduct(token, product) {
     return response
 }
 
+// /api/products/:id	DELETE	Tar bort en produkt med :id.
 async function deleteProduct(token, product) {
     let response = await fetch(URL + '/products/' + product._id, {
         method: 'DELETE',

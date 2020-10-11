@@ -1,3 +1,5 @@
+// To show the products added to Cart
+
 <template>
   <div class="cart">
     <h1>Cart section</h1>

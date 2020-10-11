@@ -1,3 +1,5 @@
+//Where all the products are to be shown to the user
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <template>
   <div class="products">

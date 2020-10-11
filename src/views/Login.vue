@@ -1,3 +1,5 @@
+// Login page sending user to Secure
+
 <template>
   <div class="login">
     <h1>Login section</h1>

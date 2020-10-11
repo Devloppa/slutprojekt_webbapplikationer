@@ -5,15 +5,6 @@
 <template>
   <div class="products">
     <h1>Slutprojekt webbapplikationer 2.0</h1>
-    <p>
-      Lets code!<br />
-      Skapa ett nytt Vue Project<br />
-      Inkludera Router<br />
-      Skapa en sida med 3st Views<br />
-      /Products<br />
-      /Cart<br />
-      /Login
-    </p>
     <img src="https://via.placeholder.com/150" alt="Placeholder" />
     <table id="table">
       <tr>
@@ -24,51 +15,144 @@
         <th>Picture</th>
         <th>Add to cart</th>
       </tr>
+      <!-- <div id="demo">
+        <ul>
+          <li v-for="uri in imageUri" :key="uri.Id">
+            {{ uri }}
+          </li>
+        </ul>
+      </div> -->
+      <!-- <p>{{products}}</p> -->
       <!-- <div id="AddToCartButton"></div> -->
     </table>
   </div>
 </template>
 
 <script>
-export default {};
+// export default{
+//   el: "#demo",
+//   data: {
+//     products: []
+//   },
+//   computed: {
+    
+//     function (data) {
+//       var product = "";
 
-jQuery(document).ready(function () {
-  // Hämtar data från json fil
-  jQuery.getJSON("./assets/products.json", function (data) {
-    var product = "";
+//       jQuery.each(data, function (key, value) {
+//         // Skapar rader med datan från json objekt
+//         product += "<tr>";
+//         product += "<td>" + value.title + "</td>";
+//         product += "<td>" + value.price + "</td>";
+//         product += "<td>" + value.serial + "</td>";
+//         product += "<td>" + value.shortDesc + "</td>";
+//         product += "<td>" + value.imgFile + "</td>";
+//         product += "</tr>";
+//         jQuery("#table").append(product);
+//       });
+//     }
+//   },
+//   mounted(){
+//     axios.get("./assets/products.json")
+//     .then((response) =>{
+//       this.products = response.data;
+//     })
+//   }
+// }
 
-    jQuery.each(data, function (key, value) {
-      // Skapar rader med datan från json objekt
-      product += "<tr>";
-      product += "<td>" + value.title + "</td>";
 
-      product += "<td>" + value.price + "</td>";
 
-      product += "<td>" + value.serial + "</td>";
 
-      product += "<td>" + value.shortDesc + "</td>";
 
-      product += "<td>" + value.imgFile + "</td>";
 
-      product += "</tr>";
-    });
 
-    // Lägger in datan i rader i tabellen
-    if (product != null) {
-      jQuery("#table").append(product);
 
-      var addButton = document.getElementById("AddToCartButton");
-      var button = document.createElement("BUTTON");
-      var textOnButton = document.createTextNode("Buy");
-      button.appendChild(textOnButton);
-      addButton.appendChild(button);
 
-      jQuery("#table").append(addButton);
-    } else {
-      console.log("Product from products.json is null!")
-    };
-  }
-});
+
+
+
+
+
+
+
+// export default {
+//   el: "#demo",
+//   data() {
+//     return {
+//       data: data.data,
+//     };
+//   },
+//   created: {
+//     productData : getJson("./assets/products.json")
+//     .then(
+//       response => {
+//         this.productData = response.body
+//         console.log(response);
+//       }
+//     )
+//   },
+//   computed: {
+//     imageUri() {
+//       return this.data.map((dataSet) => dataSet[0].imgFile);
+//     },
+//   },
+// };
+
+// export default {
+//   data (){
+//     return {
+//       products: ''
+//     }
+//   },
+//   created (){
+//     this.$http.get('@/assets/products.json')
+//     .then(
+//       response => {
+//         this.products = response.body
+//         console.log(response);
+//       }
+//     )
+//   }
+// };
+
+// jQuery(document).ready(function () {
+//   // Hämtar data från json fil
+//   jQuery.getJSON("./assets/products.json"),
+//     function (data) {
+//       var product = "";
+
+//       jQuery.each(data, function (key, value) {
+//         // Skapar rader med datan från json objekt
+//         product += "<tr>";
+//         product += "<td>" + value.title + "</td>";
+
+//         product += "<td>" + value.price + "</td>";
+
+//         product += "<td>" + value.serial + "</td>";
+
+//         product += "<td>" + value.shortDesc + "</td>";
+
+//         product += "<td>" + value.imgFile + "</td>";
+
+//         product += "</tr>";
+//       });
+
+//       // Lägger in datan i rader i tabellen
+//       if (product != null) {
+//         jQuery("#table").append(product);
+
+//         var addButton = document.getElementById("AddToCartButton");
+//         var button = document.createElement("BUTTON");
+//         var textOnButton = document.createTextNode("Buy");
+//         button.appendChild(textOnButton);
+//         addButton.appendChild(button);
+
+//         jQuery("#table").append(addButton);
+//       } else {
+//         console.log("Product from products.json is null!");
+//       }
+//     };
+// });
 </script>
 
 <style scoped>
@@ -80,7 +164,6 @@ table {
 
 h1 {
   text-align: center;
-  color: #006600;
   font-size: xx-large;
   font-family: "Gill Sans", "Gill Sans MT", " Calibri", "Trebuchet MS",
     "sans-serif";

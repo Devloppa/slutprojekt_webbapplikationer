@@ -1,6 +1,7 @@
 //Where all the products are to be shown to the user
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <template>
   <div class="products">
     <h1>Slutprojekt webbapplikationer 2.0</h1>
@@ -14,83 +15,91 @@
       /Login
     </p>
     <img src="https://via.placeholder.com/150" alt="Placeholder" />
-    <!-- <img :src="picsOfProducts"> -->
-    <!-- <div id="demo">
-      <ul>
-        <li v-for="jsonImgFile in getImgFile">
-          {{ jsonImgFile }}
-        </li>
-      </ul>
-    </div> -->
+        <table id='table'>
+            <tr>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Serial</th>
+                <th>Description</th>
+                <th>Picture</th>
+                <th>Add to cart</th>
+            </tr>
+            <!-- <div id="AddToCartButton"></div> -->
+        </table>
   </div>
 </template>
 
 <script>
-// import products from "@/assets/products.json";
-// const data = {
-//   data: [
-//     [
-//       {
-//         title: "Tricky",
-//         price: 799,
-//         shortDesc: "Unisex",
-//         category: "board",
-//         longDesc: "Skate ipsum dolor sit amet...",
-//         imgFile: "skateboard-generic.png",
-//         serial: "231874871397182",
-//       },
-//     ],
-//     [
-//       {
-//         title: "Tricky",
-//         price: 799,
-//         shortDesc: "Unisex",
-//         category: "board",
-//         longDesc: "Skate ipsum dolor sit amet...",
-//         imgFile: "skateboard-generic.png",
-//         serial: "231874871397182",
-//       },
-//     ],
-//   ],
-// };
+export default {};
 
-export default {
-  // el: "#demo",
-  // data() {
-  //   return {
-  //     jsonProducts: products,
-  //   };
-  // },
-  // computed: {
-  //   getImgFile() {
-  //     return this.jsonProducts.map((productsSet) => productsSet[0].imgFile);
-  //   },
-  // },
-  // el: "#demo",
-  // data() {
-  //   return {
-  //     data: data.data,
-  //   };
-  // },
-  // computed: {
-  //   imageUri() {
-  //     return this.data.map((dataSet) => dataSet[0].imgFile);
-  //   },
-  // },
-};
+// $(document).ready(function () {
+//   // Hämtar data från json fil
+//   $.getJSON("./assets/products.json", function (data) {
+//     var product = "";
 
-// var jsonData = URL("./assets/products.json");
-// console.log(JSON.parse(jsonData[0].title).data[0].title);
-// var jsonDataShowAll = JSON.parse(jsonData[0].title).data;
+//     $.each(data, function (key, value) {
+//       // Skapar rader med datan från json objekt
+//       product += "<tr>";
+//       product += "<td>" + value.title + "</td>";
 
-// jsonDataShowAll.array.forEach(element => {
-//   console.log(element.title)
-// });
+//       product += "<td>" + value.price + "</td>";
+
+//       product += "<td>" + value.serial + "</td>";
+
+//       product += "<td>" + value.shortDesc + "</td>";
+
+//       product += "<td>" + value.imgFile + "</td>";
+
+//       product += "</tr>";
+//     });
+
+//     // Lägger in datan i rader i tabellen
+//     if (product != null) {
+//       $("#table").append(product);
+
+//       var addButton = document.getElementById("AddToCartButton");
+//       var button = document.createElement("BUTTON");
+//       var textOnButton = document.createTextNode("Buy");
+//       button.appendChild(textOnButton);
+//       addButton.appendChild(button);
+
+//       $("#table").append(addButton);
+//     } else {
+//       console.log("Product from products.json is null!")
+//     };
+//   }
+// }};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-img {
-  height: auto;
+table {
+  margin: 0 auto;
+  font-size: large;
+  border: 1px solid black;
+}
+
+h1 {
+  text-align: center;
+  color: #006600;
+  font-size: xx-large;
+  font-family: "Gill Sans", "Gill Sans MT", " Calibri", "Trebuchet MS",
+    "sans-serif";
+}
+
+td {
+  background-color: #e4f5d4;
+  border: 1px solid black;
+}
+
+th,
+td {
+  font-weight: bold;
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+td {
+  font-weight: lighter;
 }
 </style>

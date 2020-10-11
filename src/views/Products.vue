@@ -15,60 +15,60 @@
       /Login
     </p>
     <img src="https://via.placeholder.com/150" alt="Placeholder" />
-        <table id='table'>
-            <tr>
-                <th>Title</th>
-                <th>Price</th>
-                <th>Serial</th>
-                <th>Description</th>
-                <th>Picture</th>
-                <th>Add to cart</th>
-            </tr>
-            <!-- <div id="AddToCartButton"></div> -->
-        </table>
+    <table id="table">
+      <tr>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Serial</th>
+        <th>Description</th>
+        <th>Picture</th>
+        <th>Add to cart</th>
+      </tr>
+      <!-- <div id="AddToCartButton"></div> -->
+    </table>
   </div>
 </template>
 
 <script>
 export default {};
 
-// $(document).ready(function () {
-//   // Hämtar data från json fil
-//   $.getJSON("./assets/products.json", function (data) {
-//     var product = "";
+jQuery(document).ready(function () {
+  // Hämtar data från json fil
+  jQuery.getJSON("./assets/products.json", function (data) {
+    var product = "";
 
-//     $.each(data, function (key, value) {
-//       // Skapar rader med datan från json objekt
-//       product += "<tr>";
-//       product += "<td>" + value.title + "</td>";
+    jQuery.each(data, function (key, value) {
+      // Skapar rader med datan från json objekt
+      product += "<tr>";
+      product += "<td>" + value.title + "</td>";
 
-//       product += "<td>" + value.price + "</td>";
+      product += "<td>" + value.price + "</td>";
 
-//       product += "<td>" + value.serial + "</td>";
+      product += "<td>" + value.serial + "</td>";
 
-//       product += "<td>" + value.shortDesc + "</td>";
+      product += "<td>" + value.shortDesc + "</td>";
 
-//       product += "<td>" + value.imgFile + "</td>";
+      product += "<td>" + value.imgFile + "</td>";
 
-//       product += "</tr>";
-//     });
+      product += "</tr>";
+    });
 
-//     // Lägger in datan i rader i tabellen
-//     if (product != null) {
-//       $("#table").append(product);
+    // Lägger in datan i rader i tabellen
+    if (product != null) {
+      $("#table").append(product);
 
-//       var addButton = document.getElementById("AddToCartButton");
-//       var button = document.createElement("BUTTON");
-//       var textOnButton = document.createTextNode("Buy");
-//       button.appendChild(textOnButton);
-//       addButton.appendChild(button);
+      var addButton = document.getElementById("AddToCartButton");
+      var button = document.createElement("BUTTON");
+      var textOnButton = document.createTextNode("Buy");
+      button.appendChild(textOnButton);
+      addButton.appendChild(button);
 
-//       $("#table").append(addButton);
-//     } else {
-//       console.log("Product from products.json is null!")
-//     };
-//   }
-// }};
+      $("#table").append(addButton);
+    } else {
+      console.log("Product from products.json is null!")
+    };
+  }
+});
 </script>
 
 <style scoped>

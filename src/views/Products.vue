@@ -22,58 +22,66 @@
           </li>
         </ul>
       </div> -->
-      <!-- <p>{{products}}</p> -->
+      <p>{{products}}</p>
       <!-- <div id="AddToCartButton"></div> -->
     </table>
+    <div id="app">
+      <ul>
+        <li v-for="prop in json" v-bind:key="prop">
+          {{ prop.title }} / {{ prop.imgFile }}
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
-// export default{
-//   el: "#demo",
+// export default {
+//   el: "#app",
 //   data: {
-//     products: []
+//     json: "",
 //   },
-//   computed: {
-    
-//     function (data) {
-//       var product = "";
-
-//       jQuery.each(data, function (key, value) {
-//         // Skapar rader med datan från json objekt
-//         product += "<tr>";
-//         product += "<td>" + value.title + "</td>";
-//         product += "<td>" + value.price + "</td>";
-//         product += "<td>" + value.serial + "</td>";
-//         product += "<td>" + value.shortDesc + "</td>";
-//         product += "<td>" + value.imgFile + "</td>";
-//         product += "</tr>";
-//         jQuery("#table").append(product);
+//   created: function () {
+//     fetch(
+//       "https://raw.githubusercontent.com/nicodmt/slutprojekt_webapp_2.0/master/src/assets/products.json"
+//     )
+//       .then((r) => r.json())
+//       .then((json) => {
+//         this.json = json;
 //       });
-//     }
 //   },
-//   mounted(){
-//     axios.get("./assets/products.json")
-//     .then((response) =>{
-//       this.products = response.data;
-//     })
-//   }
-// }
+// };
 
+export default{
+  el: "#demo",
+  data: {
+    products: []
+  },
+  computed: {
 
+    function (data) {
+      var product = "";
 
-
-
-
-
-
-
-
-
-
-
-
-
+      jQuery.each(data, function (key, value) {
+        // Skapar rader med datan från json objekt
+        product += "<tr>";
+        product += "<td>" + value.title + "</td>";
+        product += "<td>" + value.price + "</td>";
+        product += "<td>" + value.serial + "</td>";
+        product += "<td>" + value.shortDesc + "</td>";
+        product += "<td>" + value.imgFile + "</td>";
+        product += "</tr>";
+        jQuery("#table").append(product);
+      });
+    }
+  },
+  mounted(){
+    axios.get("./assets/products.json")
+    .then((response) =>{
+      this.products = response.data;
+    })
+  }
+}
 
 // export default {
 //   el: "#demo",

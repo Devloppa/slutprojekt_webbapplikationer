@@ -3,28 +3,25 @@
 <template>
   <div class="cart">
     <h1>Cart section</h1>
-    <img src="https://via.placeholder.com/150" alt="Placeholder" />
-    <h3>Product in cart</h3>
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, amet.
-    </p>
-    <img src="https://via.placeholder.com/150" alt="Placeholder" />
-    <h3>Product in cart</h3>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-      excepturi.
-    </p>
-    <img src="https://via.placeholder.com/150" alt="Placeholder" />
-    <h3>Product in cart</h3>
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure, fugiat?
-    </p>
-    <img src="https://via.placeholder.com/150" alt="Placeholder" />
-    <h3>Product in cart</h3>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
-      laborum.
-    </p>
+    <table id="table">
+      <tr>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Serial</th>
+        <th>Description</th>
+        <th>Picture</th>
+        <th>Add to cart</th>
+      </tr>
+      <!-- <div id="demo">
+        <ul>
+          <li v-for="uri in imageUri" :key="uri.Id">
+            {{ uri }}
+          </li>
+        </ul>
+      </div> -->
+      <p>{{ products }}</p>
+      <!-- <div id="AddToCartButton"></div> -->
+    </table>
   </div>
 </template>
 
@@ -40,5 +37,34 @@ h3 {
 p {
   margin: 0 40px;
   text-align: center;
+}
+table {
+  margin: 0 auto;
+  font-size: large;
+  border: 1px solid black;
+}
+
+h1 {
+  text-align: center;
+  font-size: xx-large;
+  font-family: "Gill Sans", "Gill Sans MT", " Calibri", "Trebuchet MS",
+    "sans-serif";
+}
+
+td {
+  background-color: #e4f5d4;
+  border: 1px solid black;
+}
+
+th,
+td {
+  font-weight: bold;
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+td {
+  font-weight: lighter;
 }
 </style>

@@ -1,33 +1,36 @@
 <template>
   <div id="app">
-    <TheNavigation />
+    
+    <router-view/>
   </div>
 </template>
-
 <script>
-import TheNavigation from "@/components/TheNavigation"
-export default{
-  components: {
-    TheNavigation
+export default {
+  created() {
+    this.$store.dispatch('loadProductList')
   }
 }
 </script>
-
-<style>
+<style lang="scss">
 body {
-  background-image: url("./assets/skate-hero-1.jpg");
+  margin: 0;
+  padding: 0;
+  background-image: url('assets/img/skate-park.jpg');
   background-size: cover;
-  background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: rgba(255, 255, 255, 0.4);
-  background-blend-mode: lighten;
-}
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  text-align: center;
-  size: 100vw;
-  color: #000;
-  margin-top: 60px;
-}
+  background-repeat: no-repeat;
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
 
+    h1, h2, h3, h4, h5 {
+      font-family: 'Cardo', serif;
+    }
+    p, button, input, label {
+      font-family: 'Josefin Sans', sans-serif;
+    }
+  }
+}
 </style>

@@ -15,10 +15,12 @@ export default {
 body {
   margin: 0;
   padding: 0;
-  background-image: url('assets/img/skate-park.jpg');
+  background-image: url('assets/img/skate-hero-1.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.18);
+  background-blend-mode: lighten;
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;

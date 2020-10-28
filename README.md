@@ -32,5 +32,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 1. Install dependencies `npm install`
 2. Seed the database with `node database/seed.js`
+<<<<<<< HEAD
 3. Start the server `node app.js`
 
+=======
+3. Start the server `node app.js
+>>>>>>> e567e09b86ce8fab55ccf1d5864818aa7991b5c1
